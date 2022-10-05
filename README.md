@@ -1,5 +1,7 @@
 # MinimalCalculator APP
 
+![image](https://user-images.githubusercontent.com/104495751/194050506-1f74fed6-46cb-4fbe-935d-a6db35ef1290.png)
+
 ## Introduction
 
 MinimalCalculator app is an app that performs some basic mathematical operations. The application was built with React and It is an assignment given to me as a student of Altschool Africa.
