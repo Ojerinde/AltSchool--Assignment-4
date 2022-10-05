@@ -1,0 +1,69 @@
+.app {
+  height: 80vh;
+  width: 55vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(200, 183, 194, 0.802);
+  box-shadow: 0 0.8rem 3rem rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 1200px) {
+  .app {
+    width: 65vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .app {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app {
+    width: 60vw;
+    flex-direction: column;
+    height: 63rem;
+    align-items: stretch;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    height: 60rem;
+  }
+}
+
+.page__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error {
+  width: 100%;
+  font-size: 2.5rem;
+  color: rgb(198, 36, 150);
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & button {
+    margin-top: 2rem;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    color: rgb(245, 94, 152);
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: rgb(241, 59, 150);
+      color: rgb(255, 255, 255);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.button {
+  font-size: 3rem;
+  height: 6rem;
+  width: 6rem;
+  background-color: rgb(253, 112, 195);
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+  color: rgb(243, 235, 235);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: rgb(247, 200, 71);
+  }
+
+  &:active {
+    background-color: rgb(185, 43, 241);
+    transform: translateY(0.1rem);
+  }
+}

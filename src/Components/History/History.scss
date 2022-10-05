@@ -1,0 +1,50 @@
+.history {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-basis: 65%;
+  height: 100%;
+  &__title {
+    font-size: 3rem;
+    color: rgb(250, 72, 179);
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+  &__list {
+
+    & li {
+      font-size: 2.5rem;
+      color: rgb(250, 76, 175);
+      margin: 1rem 0;
+      letter-spacing: 0.3rem;
+
+    }
+  }
+}
+
+.history__btns {
+  width: 100%;
+  text-align: center;
+  & button {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    color: rgb(245, 94, 152);
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: rgb(241, 59, 150);
+      color: rgb(255, 255, 255);
+    }
+
+    &:focus {
+        border: .1rem solid rgb(241, 59, 150);
+    }
+  }
+}
