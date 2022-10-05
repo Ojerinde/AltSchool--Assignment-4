@@ -11,7 +11,9 @@ The App performs the following mathematical operations,
 - Multiplication
 - Division
 
-The app has both the calculator view or page and history view or page which can be switched by clicking on the any of the icon in the sidebar.
+The app has two view or page which can be switched by clicking on the any of the icon in the sidebar.
+* Calculator view or page 
+* History view or page 
 
 ## Main Files: Project Structure
 
