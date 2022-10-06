@@ -1,4 +1,4 @@
-// import { ErrorBoundary } from "react-error-boundary";
+import { ErrorBoundary } from "react-error-boundary";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -9,20 +9,20 @@ import History from "./Components/History/History";
 import "./App.scss";
 
 // Error fallback component
-// const ErrorFallback = (props) => {
-//   return (
-//     <div role="alert" className="error">
-//       <p>Something went wrong!</p>
-//       <pre>{props.error.message}</pre>
-//       <button onClick={props.resetErrorBoundary}>Try again</button>
-//     </div>
-//   );
-// };
+const ErrorFallback = (props) => {
+  return (
+    <div role="alert" className="error">
+      <p>Something went wrong!</p>
+      <pre>{props.error.message}</pre>
+      <button onClick={props.resetErrorBoundary}>Try again</button>
+    </div>
+  );
+};
 
 const App = () => {
   const [history, setHistory] = useState([]);
 
-  // To go back home if an error occurs
+  // To go back home if the error boundary catch an error
   const navigate = useNavigate();
 
   // Get expression from calculator component
@@ -32,29 +32,29 @@ const App = () => {
     setHistory((prev) => [...prev, data]);
   };
 
-  // Switch between pages
+  // A state to manage switching between pages
   const [page, setPage] = useState(0);
 
+  // Page switching handler 0 for calculator, 1 for history
   const getPageHandler = (page) => {
     setPage(page);
   };
 
   return (
     <div className="app">
-      {/* <ErrorBoundary
+      <ErrorBoundary
         FallbackComponent={ErrorFallback}
         onReset={() => {
           navigate("/");
         }}
-      > */}
-      <SideBar onSwitch={getPageHandler} />
+      >
+        <SideBar onSwitch={getPageHandler} />
         {page === 0 ? (
           <Calculator getData={getDataHandler} />
         ) : (
           <History history={history} />
         )}
-
-      {/* </ErrorBoundary> */}
+      </ErrorBoundary>
     </div>
   );
 };

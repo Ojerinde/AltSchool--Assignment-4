@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 
 import "./Calculator.scss";
 
-// Conmponent
+// Component
 const Calculator = (props) => {
   const [expression, setExpression] = useState("");
 
@@ -20,10 +20,10 @@ const Calculator = (props) => {
   const submitHandler = () => {
     if (expression?.trim().length > 0) {
       try {
-        // const result = Function("return" + expression)();
         const result = eval(expression);
         props.getData(expression + " = " + result);
         setExpression(`${result}`);
+
       } catch (error) {
         alert("Invalid expression");
       }

@@ -4,6 +4,7 @@ import "./History.scss";
 const HISTORY_PER_PAGE = 4;
 
 const History = ({ history }) => {
+  // Pagination state
   const [page, setPage] = useState(1);
 
   const totalHistory = history.length;
