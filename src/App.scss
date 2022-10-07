@@ -30,6 +30,15 @@
 
 @media screen and (max-width: 600px) {
   .app {
+    width: 70vw;
+    height: 60rem;
+    margin-bottom: 5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .app {
+    width: 90vw;
     height: 60rem;
     margin-bottom: 5rem;
   }

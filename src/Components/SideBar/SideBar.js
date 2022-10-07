@@ -2,22 +2,22 @@ import { RiHistoryLine } from "react-icons/ri";
 import { BsCalculatorFill } from "react-icons/bs";
 
 import "./SideBar.scss";
-const SideBar = ({ onSwitch }) => {
-
+const SideBar = ({ onSwitch, page }) => {
   // set page to calculator page
-  const homePageHandler = () => {
-    onSwitch(0);
-  };
-
-  // set page to history page
-  const historyPageHandler = () => {
-    onSwitch(1);
+  const pageHandler = (num) => {
+    onSwitch(num);
   };
 
   return (
     <div className="sidebar">
-      <BsCalculatorFill className="icon" onClick={homePageHandler} />
-      <RiHistoryLine className="icon" onClick={historyPageHandler} />
+      <BsCalculatorFill
+        className={`${page === 0 ? "active" : ""} icon`}
+        onClick={pageHandler.bind(null, 0)}
+      />
+      <RiHistoryLine
+        className={`${page === 1 ? "active" : ""} icon`}
+        onClick={pageHandler.bind(null, 1)}
+      />
     </div>
   );
 };

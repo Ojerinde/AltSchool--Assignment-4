@@ -27,9 +27,21 @@ const App = () => {
 
   // Get expression from calculator component
   const getDataHandler = (data) => {
-    // Max history length is 20
-    if (history.length === 20) return;
-    setHistory((prev) => [...prev, data]);
+    // If history length is 20, remove the 20th history and add the recent one.
+    if (history.length === 5) {
+      setHistory((prev) => {
+        const newState = [...prev]
+        newState.pop()
+        newState.unshift(data)
+        return newState
+      })
+    } else {
+      setHistory((prev) => {
+        const newState = [...prev];
+        newState.unshift(data);
+        return newState;
+      });
+    }
   };
 
   // A state to manage switching between pages
@@ -48,7 +60,7 @@ const App = () => {
           navigate("/");
         }}
       >
-        <SideBar onSwitch={getPageHandler} />
+        <SideBar onSwitch={getPageHandler} page={page} />
         {page === 0 ? (
           <Calculator getData={getDataHandler} />
         ) : (

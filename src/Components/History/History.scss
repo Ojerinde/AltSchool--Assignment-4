@@ -1,13 +1,13 @@
 .history {
-  padding: 4rem;
+  flex-basis: 65%;
+  height: 100%;
+  padding: 4rem 0 3rem 4rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  flex-basis: 65%;
-  height: 100%;
   &__title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: rgb(250, 72, 179);
     font-weight: 500;
     margin-bottom: 2rem;
@@ -15,9 +15,9 @@
   &__list {
 
     & li {
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: rgb(250, 76, 175);
-      margin: 1rem 0;
+      margin: 2rem 0;
       letter-spacing: 0.3rem;
 
     }
@@ -46,5 +46,11 @@
     &:focus {
         border: .1rem solid rgb(241, 59, 150);
     }
+  }
+}
+@media screen and (max-width: 768px) {
+  .history {
+    padding-left: 7rem ;
+    height: fit-content;
   }
 }

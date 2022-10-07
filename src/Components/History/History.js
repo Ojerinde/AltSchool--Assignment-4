@@ -26,7 +26,7 @@ const History = ({ history }) => {
       </div>
       <div className="history__btns">
         {Array.from({ length: totalPages }, (_, i) => i + 1).map((item) => (
-          <button onClick={(e) => setPage(item)}>{item}</button>
+          <button key={item} onClick={(e) => setPage(item)}>{item}</button>
         ))}
       </div>
     </div>
